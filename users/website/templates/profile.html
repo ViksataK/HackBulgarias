@@ -1,0 +1,17 @@
+<style>
+  .errors {
+    color: red;
+  }
+</style>
+
+<form action="" method="POST">
+  {% csrf_token %}
+  <label>
+    This is the profile page
+  </label>
+    <input type="submit" value='Logout'>
+</form>
+
+<div class="errors">
+  {{error}}
+</div> 

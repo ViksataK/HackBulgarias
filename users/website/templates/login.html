@@ -1,0 +1,24 @@
+<style>
+  .errors {
+    color: red;
+  }
+</style>
+
+<form action="{% url 'login' %}" method="POST">
+  {% csrf_token %}
+  <label for="username">
+    Username:
+  </label>
+  <input id="username" name="username" type="username">
+
+  <label>
+    Password:
+    <input id="password" name="password" type="password">
+  </label>
+
+  <input type="submit" value='Login!'>
+</form>
+
+<div class="errors">
+  {{error}}
+</div>
